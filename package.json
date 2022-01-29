@@ -1,0 +1,36 @@
+{
+  "name": "w3c-validation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open",
+    "cypress:report": "node ./cypress/cucumber_report.js",
+    "cypress:run": "docker run -it -v $PWD:/e2e -w /e2e cypress/included:9.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knn9308/w3c-validation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/knn9308/w3c-validation/issues"
+  },
+  "homepage": "https://github.com/knn9308/w3c-validation#readme",
+  "devDependencies": {
+    "cypress": "^9.3.1",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "multiple-cucumber-html-reporter": "^1.18.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    },
+    "nonGlobalStepDefinitions": true
+  }
+}
