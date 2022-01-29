@@ -14,3 +14,5 @@ run "**_npm run cypress:report_**"
 Report located at: "**_/cypress/cucumber-report/index.html_**"
 ### Open Cypress
 run "**_npm run cypress:open_**"
+### Videos
+When running tests in Docker, video of test runs are saved at "**_/cypress/videos_**" 
